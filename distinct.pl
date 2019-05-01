@@ -11,7 +11,8 @@ my $tmpdir = tempdir( CLEANUP => 1 );
 chdir($tmpdir);
 
 while (<>) {
-	chop;
+	s/\n$//;
+	s/\r$//;
 	# Replace _ by __
 	# replace / by _! so it is reversible
 	# replace . by _. so it is reversible
