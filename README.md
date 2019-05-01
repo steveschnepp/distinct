@@ -1,2 +1,2 @@
 # distinct
-Various implemenation of distinct (sort | uniq)
+Various implementation of distinct (sort | uniq)
