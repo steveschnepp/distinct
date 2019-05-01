@@ -19,6 +19,7 @@ while (<>) {
 	s/_/__/g;
 	s,/,_!,g;
 	s,\.,_.,g;
+	s, ,/,g;
 	make_path($_);
 }
 
@@ -26,6 +27,7 @@ while (<>) {
 sub process {
 	my $filename = $File::Find::name;
 	$filename =~ s,^\./,,;
+	$filename =~ s,/, ,g;
 	$filename =~ s,_\.,.,g;
 	$filename =~ s,_!,/,g;
 	$filename =~ s,__,_,g;
